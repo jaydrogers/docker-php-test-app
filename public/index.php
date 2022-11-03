@@ -1,5 +1,3 @@
-<!-- Intentionally throw an error -->
-<?php echo $a; ?>
-
-<!-- Display PHP info -->
-<?php phpinfo(); ?>
+<?php
+header("Access-Control-Allow-Origin: *");
+?>

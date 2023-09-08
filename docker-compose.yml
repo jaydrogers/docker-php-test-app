@@ -2,7 +2,9 @@ version: '3.8'
 services:
 
   php:
-    image: serversideup/php:beta-8.2-fpm-nginx
+    build:
+      context: .
+      target: base
     environment:
       PHP_DISPLAY_ERRORS: On
       SSL_MODE: "mixed"
@@ -13,9 +15,6 @@ services:
       - .:/var/www/html/
     networks:
       - development
-    # # 🔥 Uncomment for debugging
-    # environment:
-    #   DEBUG_OUTPUT: "true"
 
 networks:
   development:

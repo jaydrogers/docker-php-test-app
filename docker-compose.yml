@@ -2,12 +2,9 @@ version: '3.8'
 services:
 
   php:
-    build:
-      context: .
-      target: base
+    image: serversideup/php-pro:8.2-nginx-unit-bookworm
     environment:
-      PHP_DISPLAY_ERRORS: On
-      SSL_MODE: "mixed"
+      SSL_MODE: mixed
     ports:
       - 80:80
       - 443:443

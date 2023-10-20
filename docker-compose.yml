@@ -2,7 +2,7 @@ version: '3.8'
 services:
 
   php:
-    image: serversideup/php-pro:8.2-nginx-unit-bookworm
+    image: serversideup/php-pro:8.2-fpm-nginx-bookworm
     environment:
       SSL_MODE: mixed
     ports:

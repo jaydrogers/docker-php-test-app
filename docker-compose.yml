@@ -2,9 +2,10 @@ version: '3.8'
 services:
 
   php:
-    image: serversideup/php-pro:8.2-fpm-nginx-bookworm
+    image: serversideup/php:8.1.2-unit-bookworm
     environment:
-      SSL_MODE: mixed
+      SSL_MODE: "off"
+      # LOG_LEVEL: "debug"
     ports:
       - 80:80
       - 443:443
@@ -12,6 +13,7 @@ services:
       - .:/var/www/html/
     networks:
       - development
+    # entrypoint: ""
 
 networks:
   development:

@@ -1,2 +1,3 @@
-FROM serversideup/php:beta-8.2-fpm as base
-LABEL maintainer="Server Side Up <@serversideup>"
+FROM serversideup/php:8.3-fpm-nginx-bookworm
+
+COPY zzz-custom-php.ini /usr/local/etc/php/conf.d/
